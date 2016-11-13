@@ -1,0 +1,30 @@
+/* line 1, ../sass/style.scss */
+#main {
+  margin-top: 100px;
+  min-height: 90vh;
+}
+/* line 5, ../sass/style.scss */
+#main #trump {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* line 11, ../sass/style.scss */
+#main .prev, #main .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  transition: 0.6s ease;
+}
+/* line 20, ../sass/style.scss */
+#main .prev {
+  left: 0;
+}
+/* line 23, ../sass/style.scss */
+#main .next {
+  right: 0;
+}
