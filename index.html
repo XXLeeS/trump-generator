@@ -2,23 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Trump Generator</title>
     
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="assets/css/stylesheets/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/plugins/Flat-UI/dist/css/flat-ui.min.css">
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/stylesheets/style.css">
 
     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="assets/plugins/Flat-UI/dist/js/flat-ui.min.js"></script>
+    <script src="assets/plugins/html2canvas.js"></script>
 </head>
 <body>
     <div class="container" id="main">
+        <h1 class="text-center" style="margin-bottom: 30px;">乂 Trump Generator 乂</h1>
         <div class="row">
-            <div class="col-md-offset-2 col-md-8" style="position: relative;">
-                <img src="assets/images/trump.jpg" id="trump"/>
+            <div class="col-md-offset-2 col-md-8">
+                <div class="image-container">
+                    <img src="assets/images/mask0.png" class="mask" />
+                    <img src="assets/images/mask1.png" class="mask" />
+                    <img src="assets/images/mask2.png" class="mask" />
+                    <img src="assets/images/mask3.png" class="mask" />
+                    <img src="assets/images/trump.jpg" id="trump" />
+                    <div id="text"></div>
+                </div>
                 
                 <a class="prev"><i class="fa fa-caret-left fa-4x" aria-hidden="true"></i></a>
                 <a class="next"><i class="fa fa-caret-right fa-4x" aria-hidden="true"></i></a>
@@ -29,11 +40,17 @@
                 <input type="text" id="text_input" class="form-control" placeholder="Text Anything">
             </div>
         </div>
+        <div class="row">
+            <button class="btn btn-primary" id="save">Save Image</button>
+            <a id="download" style="display: hidden;"></a>
+        </div>
     </div>
     
     <footer class="text-center">
         <p>Image Source: <a href="https://commons.wikimedia.org/wiki/File:Donald_Trump_by_Gage_Skidmore_2.jpg">wikimedia commons</a></p>
         <p>Created With <a href="http://designmodo.github.io/Flat-UI/">Flat UI</a></p>
     </footer>
+    
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

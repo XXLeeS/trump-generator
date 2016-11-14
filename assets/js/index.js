@@ -30,4 +30,15 @@ function calc_next(i){
 
 $('#main #text_input').keyup(function(){
     $('#main .image-container #text').text($(this).val()); 
+});
+
+$('#save').click(function(){
+    html2canvas($('#main .image-container'), {
+        onrendered: function(canvas) {
+            var a = $('#download');
+            a.attr("href", canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+            a.attr("download", "trump.png");
+            a[0].click();
+        },
+    })
 })

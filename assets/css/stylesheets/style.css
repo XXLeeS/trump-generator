@@ -1,16 +1,43 @@
-/* line 1, ../sass/style.scss */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+/* line 3, ../sass/style.scss */
+html * {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* line 7, ../sass/style.scss */
 #main {
-  margin-top: 100px;
   min-height: 90vh;
 }
-/* line 5, ../sass/style.scss */
-#main #trump {
+/* line 10, ../sass/style.scss */
+#main .image-container {
   width: 80%;
-  height: auto;
-  display: block;
   margin: 0 auto;
+  position: relative;
 }
-/* line 11, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
+#main .image-container #trump {
+  width: 100%;
+  display: block;
+}
+/* line 18, ../sass/style.scss */
+#main .image-container .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+}
+/* line 25, ../sass/style.scss */
+#main .image-container #text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  background-color: #000;
+}
+/* line 35, ../sass/style.scss */
 #main .prev, #main .next {
   cursor: pointer;
   position: absolute;
@@ -20,11 +47,22 @@
   padding: 16px;
   transition: 0.6s ease;
 }
-/* line 20, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 #main .prev {
   left: 0;
 }
-/* line 23, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 #main .next {
   right: 0;
+}
+/* line 50, ../sass/style.scss */
+#main #save {
+  display: block;
+  margin: 0px auto 10px;
+}
+
+/* line 56, ../sass/style.scss */
+footer p {
+  margin: 0;
+  padding: 5px 0;
 }

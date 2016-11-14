@@ -1,12 +1,36 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html *{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
 #main{
-    margin-top: 100px;
     min-height: 90vh;
     
-    #trump{
+    .image-container{
         width: 80%;
-        height: auto;
-        display: block;
         margin: 0 auto;
+        position: relative;
+        #trump{
+            width: 100%;
+            display: block;
+        }
+        .mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            visibility: hidden;
+        }
+        #text{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            background-color: #000;
+        }
     }
     .prev, .next{
         cursor: pointer;
@@ -23,5 +47,14 @@
     .next{
         right: 0;
     }
+    #save{
+        display: block;
+        margin: 0px auto 10px;
+    }
+}
+
+footer p{
+    margin: 0;
+    padding: 5px 0;
 }
     
